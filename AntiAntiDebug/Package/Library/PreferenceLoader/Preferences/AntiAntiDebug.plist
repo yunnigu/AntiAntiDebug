@@ -1,0 +1,48 @@
+{
+	entry = {
+		cell = PSLinkCell;
+		label = AntiAntiDebug;
+		icon = "anti_debug-logo.png";
+		items = (
+			{
+				bundle = AppList;
+				isController = 1;
+				cell = PSLinkCell;
+				label = "Enabled Applications";
+				ALSettingsPath = "/var/mobile/Library/Preferences/com.yunnigu.AntiAntiDebug.plist";
+				ALSettingsKeyPrefix = "AntiAntiDebugEnabled-";
+				"ALSettingsDefaultValue" = 0;
+				ALAllowsSelection = 1;
+				ALChangeNotification = "com.yunnigu.AntiAntiDebug.settingschanged";
+				ALSectionDescriptors = (
+					{
+						items = ();
+						"footer-title" = "Select which applications to Kill AntiDebug";
+					},
+					{
+						title = " ";
+						predicate = "isSystemApplication = FALSE";
+						"icon-size" = 29;
+						"suppress-hidden-apps" = 1;
+						"cell-class-name" = ALSwitchCell;
+					},
+					{
+						title = "System Applications";
+						predicate = "isSystemApplication = TRUE AND NOT (displayIdentifier IN {'com.iptm.bigboss.sbsettings', 'com.booleanmagic.overboard', 'eu.heinelt.ifile'})";
+						"icon-size" = 29;
+						"suppress-hidden-apps" = 1;
+						"cell-class-name" = ALSwitchCell;
+					},
+				);
+			},
+			{
+				cell = PSGroupCell;
+				footerText = "";
+			},
+			{
+				cell = PSGroupCell;
+				footerText = AntiAntiDebug;
+			},
+		);
+	};
+}

@@ -1,0 +1,17 @@
+Package: com.yunnigu.AntiAntiDebug
+Name: AntiAntiDebug
+Version: 0.1-1
+Description: 
+Section: System
+Depends: mobilesubstrate, preferenceloader, applist
+Conflicts: 
+Replaces: 
+Priority: optional
+Architecture: iphoneos-arm
+Author: Yunnigu
+dev: 
+Homepage: 
+Depiction: 
+Maintainer: 
+Icon: file:///Library/PreferenceLoader/Preferences/anti_debug-logo@2x.png
+
